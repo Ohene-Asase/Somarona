@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ronatrack-957c0": {
+      "hosting": {
+        "somarona": [
+          "ronatrack-957c0"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "sofia-pro", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #f2f3f7 !important;
+  height: 100vh;
+  width: 100%;
+  color: #24355a;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 20px;
+  padding-top: 100px;
+  padding-right: 10px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  -ms-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #d0cece;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  -ms-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #F5F5F5;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vh-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.no-deco {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.head {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: inherit !important;
+}
+
+.bb {
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.bg-main {
+  background-color: #24355a !important;
+  color: #ffffff !important;
+}
+
+.color-main {
+  color: #24355a !important;
+}
+
+.full-height {
+  height: 100% !important;
+}
+
+.b-none {
+  border: none;
+}

@@ -1,0 +1,36 @@
+.bg-welcome {
+  background-color: #5b3dfd;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.pt-10 {
+  padding-top: 9rem;
+}
+
+.btn-play {
+  padding: 1.2rem 1.5rem !important;
+  border-radius: 50% !important;
+  border: none;
+}
+
+.btn-play:active,
+.btn-play:focus {
+  outline: none;
+  border: none;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .bg-welcome {
+    display: none !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .bg-welcome {
+    display: none !important;
+  }
+}

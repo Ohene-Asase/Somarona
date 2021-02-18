@@ -1,0 +1,215 @@
+<div class="row mt-3">
+  <div class="col-12 col-md-5 mb-3">
+    <div class="card b-none user-country">
+      <div class="card-body">
+
+        <div class="row">
+          <div class="col-7 mb-2">
+            <p class="text-muted small-text">Current Country</p>
+            <h3 class="font-weight-bold">
+              <img [src]="userCountryStats?.flag" height="25" alt=""
+                class="mr-2">{{userCountryStats?.Country || 'Loading ...'}}
+              </h3>
+          </div>
+          <div class="col-5 mb-2">
+            <div class="text-right">
+              <p class="text-muted small-text">Total Cases</p>
+              <h3 class="font-weight-bold">{{(userCountryStats?.TotalConfirmed | number) || 'Loading ...'}}</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-4">
+            <div class="infected">
+              <div class="row">
+                <div class="col">
+                  <p class="text-muted smaller-text mb-0">INFECTED</p>
+                  <h5 class="font-weight-bold mt-0">{{((userCountryStats?.TotalConfirmed - (userCountryStats?.TotalRecovered + userCountryStats?.TotalDeaths)) | number) || 'Loading ...'}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="infected">
+              <div class="row">
+                <div class="col">
+                  <p class="text-muted smaller-text mb-0">RECOVERED</p>
+                  <h5 class="font-weight-bold mt-0">{{(userCountryStats?.TotalRecovered | number) || 'Loading ...'}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="infected">
+              <div class="row">
+                <div class="col">
+                  <p class="text-muted smaller-text mb-0">DEATHS</p>
+                  <h5 class="font-weight-bold mt-0">{{(userCountryStats?.TotalDeaths | number) || 'Loading ...'}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-7 mb-3">
+    <div class="card b-none learn">
+      <div class="card-body text-white">
+        <div class="row">
+          <div class="col-12 col-md-9">
+            <h5 class=" font-weight-bold">Some information about Covid 19</h5>
+            <p class="pt-3 pb-3">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam corporis quo vel qui odit, blanditiis illo
+              at doloremque officia velit voluptatibus.
+            </p>
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank" class="no-deco">
+              <button class="btn btn-light">Learn more</button>
+            </a>
+          </div>
+          <div class="col-12 col-md-3">
+            <img src="../../../assets/images/learn-hero-1.svg" class="img-fluid mt-3" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+
+  <div class="col-12 col-md-3 mb-3">
+    <div class="card b-none">
+      <div class="card-body">
+        <p class="small-text text-muted">
+          <i class="fas fa-globe-europe mr-2 text-primary"></i>
+          Total cases
+        </p>
+        <div class="row">
+          <div class="col">
+            <p class="pb-0 mb-0 new-count"><i class="fas fa-arrow-up mr-2 text-primary"></i>{{(globalStats?.NewConfirmed | number) || 'Loading ...'}}</p>
+            <p class="text-muted">New cases</p>
+          </div>
+          <div class="col-7 text-right">
+            <h3 class="font-weight-bold">{{(globalStats?.TotalConfirmed | number) || 'Loading ...'}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-12 col-md-3 mb-3">
+    <div class="card b-none">
+      <div class="card-body">
+        <p class="small-text text-muted">
+          <i class="fas fa-globe-europe mr-2 text-warning"></i>
+          Total Infected
+        </p>
+        <div class="row">
+          <div class="col">
+            <p class="pb-0 mb-0 new-count"><i class="fas fa-arrow-up mr-2 text-warning"></i>{{((globalStats?.NewConfirmed - (globalStats?.NewRecovered + globalStats?.NewDeaths)) | number) || 'Loading ...'}}</p>
+            <p class="text-muted">New infected</p>
+          </div>
+          <div class="col-7 text-right">
+            <h3 class="font-weight-bold">{{((globalStats?.TotalConfirmed - (globalStats?.TotalRecovered + globalStats?.TotalDeaths)) | number) || 'Loading ...'}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-3 mb-3">
+    <div class="card b-none">
+      <div class="card-body">
+        <p class="small-text text-muted">
+          <i class="fas fa-globe-europe mr-2 text-success"></i>
+          Total Recovered
+        </p>
+        <div class="row">
+          <div class="col">
+            <p class="pb-0 mb-0 new-count"><i class="fas fa-arrow-up mr-2 text-success"></i>{{(globalStats?.NewRecovered | number) || 'Loading ...'}}</p>
+            <p class="text-muted">New recov</p>
+          </div>
+          <div class="col-7 text-right">
+            <h3 class="font-weight-bold">{{(globalStats?.TotalRecovered | number) || 'Loading ...'}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-3 mb-3">
+    <div class="card b-none">
+      <div class="card-body">
+        <p class="small-text text-muted">
+          <i class="fas fa-globe-europe mr-2 text-danger"></i>
+          Total Deaths
+        </p>
+        <div class="row">
+          <div class="col">
+            <p class="pb-0 mb-0 new-count"><i class="fas fa-arrow-up mr-2 text-danger"></i>{{(globalStats?.TotalDeaths | number) || 'Loading ...'}}</p>
+            <p class="text-muted">New deaths</p>
+          </div>
+          <div class="col-7 text-right">
+            <h3 class="font-weight-bold">{{(globalStats?.NewDeaths | number) || 'Loading ...'}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row mt-4">
+  <div class="col-12 col-md-7 mb-3">
+    <div class="card b-none">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-2">
+            <h5 class="pt-2 font-weight-bold">All Infected Countries</h5>
+          </div>
+          <div class="col-12 col-md-6 mb-2">
+            <div class="form-label-group">
+              <input type="text" id="search" class="form-control" placeholder="Email" [(ngModel)]="term">
+              <label for="search">Search by country name</label>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive tableFixHead">
+          <table class="table">
+            <caption>List of infected countries</caption>
+            <thead>
+              <tr>
+                <th scope="col">Country</th>
+                <th scope="col">Total</th>
+                <th scope="col">Recovered</th>
+                <th scope="col">Deaths</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let country of countryStats | customSearch: { Country: term }">
+                <td><img [src]="country.flag" class="mr-2" alt="" height="20"> {{country.Country}}</td>
+                <td>{{country.TotalConfirmed | number}}</td>
+                <td>{{country.TotalRecovered | number}}</td>
+                <td>{{country.TotalDeaths | number}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-5 mb-3">
+    <div class="card b-none countries-card">
+      <div class="card-body">
+        <h4>Chart coming soon</h4>
+        <div style="height: auto; width: 100%;" id="geo_1_chart"></div>
+      </div>
+    </div>
+  </div>
+</div>
